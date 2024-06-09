@@ -3,7 +3,7 @@ import { AuthContext } from '../context/AuthContext'
 const Welcome = () => {
     const { isAuthenticated, user } = useContext(AuthContext);
     return (
-        <div>
+        <div className='welcome'>
             {isAuthenticated ? (<h1>Welcome,{user.name}</h1>) : (<h1>Welcome</h1>)
             }
             <p>

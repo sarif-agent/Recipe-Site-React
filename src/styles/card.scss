@@ -112,6 +112,54 @@ $text-color: #885133;
 
 }
 
+.settings-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .settings-container {
+        display: flex;
+
+        justify-content: center;
+        flex-direction: column;
+        margin: 50px;
+
+        .profile {
+            width: 700px;
+            flex-wrap: nowrap;
+            display: flex;
+            background-color: white;
+
+            .container {
+
+                flex-wrap: wrap;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+        }
+
+        .settings {
+            align-items: center;
+            /* Yatay hizalama ortala */
+            flex-wrap: wrap;
+            /* Öğelerin sığmadığı durumlarda bir alt satıra geçmesini sağla */
+            display: flex;
+            /* Flex konteynerı olarak düzenle */
+            flex-direction: column;
+            /* Öğeleri dikey yönde düzenle */
+        }
+
+
+
+    }
+
+
+
+}
+
 
 
 #edit,
