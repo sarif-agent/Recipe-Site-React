@@ -11,7 +11,7 @@ $text-color: #1B1A17;
     color: $text-color;
     display: flex;
     justify-items: center;
-    border: solid rgba(29, 23, 32, 0.705);
+    border: 2px solid rgba(29, 23, 32, 0.705);
     box-shadow: 1px 1px 8px rgba(29, 23, 32, 0.705);
 
     // rgb(55, 39, 66, 0.705);
@@ -34,7 +34,7 @@ $text-color: #1B1A17;
         img {
             height: 100%;
             width: 60%;
-            border: solid black;
+            border: 1px solid black;
             box-shadow: 1px 1px 4px black;
             border-radius: 3px;
 
@@ -55,10 +55,11 @@ $text-color: #1B1A17;
         margin: 0;
         width: 100%;
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif, serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
+        font-family: "Alegreya Sans SC", sans-serif;
+        font-weight: 600;
         font-style: normal;
+        color: black;
+
     }
 
     p {

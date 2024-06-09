@@ -52,7 +52,7 @@ const Card = ({ title, description, image, id, }) => {
                             <img src={image} alt={title} className="recipe-image" />
                         </div>
 
-                        <h2>{title}</h2>
+                        <h2>{title.toUpperCase()}</h2>
                         <p>{description}</p>
 
                         <button id='edit' onClick={() => setIsEditing(true)}><FaPen size={64} opacity={1} /></button>
