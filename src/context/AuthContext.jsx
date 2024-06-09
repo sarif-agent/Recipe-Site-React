@@ -38,8 +38,8 @@ export const AuthContextProvider = ({ children }) => {
 
     const login = async (username, password) => {
         try {
-            // const response = await AuthService.loginService(username, password)
-            const response = await AuthService.loginService("john@mail.com", "changeme")
+            const response = await AuthService.loginService(username, password)
+            //  const response = await AuthService.loginService("john@mail.com", "changeme")
 
             if (response.data.access_token) {
                 setIsAuthenticated(JSON.parse(localStorage.getItem("user")))
