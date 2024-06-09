@@ -1,33 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { UserPreferencesContext } from '../context/UserPreferencesContext'
-import axios from "axios";
-
+import { AuthContext } from '../context/AuthContext'
 const Settings = () => {
     const { language, changeLanguage, theme, toggleTheme } = useContext(UserPreferencesContext)
-    const [user, setUser] = useState({});
+    const { user } = useContext(AuthContext);
 
-    useEffect(() => {
-        const getUserProfile = async () => {
-
-            const response = await axios.get("https://api.escuelajs.co/api/v1/auth/profile", {
-                headers: {
-                    Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).access_token}`
-                }
-            })
-                .then(response => setUser(response.data))
-                .catch(e => console.log(e))
-
-
-        }
-
-        getUserProfile();
-    }, []);
-
-
+    console.log(user);
 
     return (
         <div className='settings-page'>
-            <h2>Settings</h2>
             <div className="language-options">
                 <select value={language} onChange={e => changeLanguage(e.target.value)}>
                     <option value="English">English</option>

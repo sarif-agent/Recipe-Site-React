@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-
+import { FaRegTrashAlt, FaPen } from "react-icons/fa";
 import { ApiContext } from "../context/ApiContext";
 const Card = ({ title, description, image, id, }) => {
 
@@ -55,11 +55,11 @@ const Card = ({ title, description, image, id, }) => {
                         <h2>{title}</h2>
                         <p>{description}</p>
 
-                        <button id='edit' onClick={() => setIsEditing(true)}>Edit</button>
+                        <button id='edit' onClick={() => setIsEditing(true)}><FaPen size={64} opacity={1} /></button>
                         <button id='del' onClick={() => {
                             if (confirm("Are sure you want to delete?"))
                                 return deleteRecipe(id);
-                        }}>delete</button>
+                        }}><FaRegTrashAlt size={64} opacity={1} /></button>
                     </div>
                 )
             }

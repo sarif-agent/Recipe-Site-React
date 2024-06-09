@@ -1,13 +1,35 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import AuthService from "../Services/AuthService";
 import { json } from "react-router-dom";
-
+import axios from "axios";
 
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
 
     const [isAuthenticated, setIsAuthenticated] = useState(false)
+    const [user, setUser] = useState({});
+
+    useEffect(() => {
+        const getUserProfile = async () => {
+
+            const response = await axios.get("https://api.escuelajs.co/api/v1/auth/profile", {
+                headers: {
+                    Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).access_token}`
+                }
+            })
+                .then(response => {
+
+                    setUser(response.data)
+
+                })
+                .catch(e => console.log(e))
+
+
+        }
+
+        getUserProfile();
+    }, localStorage.getItem("user"));
 
 
 
@@ -36,7 +58,7 @@ export const AuthContextProvider = ({ children }) => {
     }
 
     return (
-        <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+        <AuthContext.Provider value={{ isAuthenticated, login, logout, user }}>
             {children}
         </AuthContext.Provider >
     )
