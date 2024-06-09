@@ -1,0 +1,146 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 16px solid #d1914b;
+  box-sizing: border-box;
+  --c: no-repeat radial-gradient(farthest-side, #d64123 100%, #0000);
+  --b: no-repeat radial-gradient(farthest-side, #000 100%, #0000);
+  background:
+    var(--c) 21px 25px,
+    var(--b) 16px 25px,
+    var(--c) 45px 33px,
+    var(--b) 39px 25px,
+    var(--c) 21px 56px,
+    var(--b) 21px 44px,
+    var(--c) 46px 10px,
+    var(--b) 60px 41px,
+    var(--c) 57px 53px,
+    var(--b) 41px 58px,
+
+    var(--c) 84px 25px,
+    var(--b) 79px 25px,
+    var(--c) 108px 33px,
+    var(--b) 102px 25px,
+    var(--c) 84px 56px,
+    var(--b) 84px 44px,
+    var(--c) 109px 10px,
+    var(--b) 123px 41px,
+    var(--c) 120px 53px,
+    var(--b) 104px 58px,
+
+    var(--c) 18px 88px,
+    var(--b) 13px 88px,
+    var(--c) 42px 96px,
+    var(--b) 36px 88px,
+    var(--c) 18px 119px,
+    var(--b) 18px 107px,
+    var(--c) 43px 73px,
+    var(--b) 57px 104px,
+    var(--c) 54px 116px,
+    var(--b) 38px 121px,
+
+
+    var(--c) 83px 88px,
+    var(--b) 78px 88px,
+    var(--c) 107px 96px,
+    var(--b) 101px 88px,
+    var(--c) 83px 119px,
+    var(--b) 83px 107px,
+    var(--c) 108px 73px,
+    var(--b) 122px 104px,
+    var(--c) 119px 116px,
+    var(--b) 103px 121px,
+
+
+    #f6d353;
+  animation: l4 3s infinite;
+  background-size: 15px 15px, 6px 6px;
+
+}
+
+@keyframes l4 {
+  0% {
+    -webkit-mask: conic-gradient(#0000 0, #000 0)
+  }
+
+  16.67% {
+    -webkit-mask: conic-gradient(#0000 60deg, #000 0)
+  }
+
+  33.33% {
+    -webkit-mask: conic-gradient(#0000 120deg, #000 0)
+  }
+
+  50% {
+    -webkit-mask: conic-gradient(#0000 180deg, #000 0)
+  }
+
+  66.67% {
+    -webkit-mask: conic-gradient(#0000 240deg, #000 0)
+  }
+
+  83.33% {
+    -webkit-mask: conic-gradient(#0000 300deg, #000 0)
+  }
+
+  100% {
+    -webkit-mask: conic-gradient(#0000 360deg, #000 0)
+  }
+}

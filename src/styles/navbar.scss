@@ -1,0 +1,44 @@
+// src/styles/Navbar.scss
+
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$white-color: #fff;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+
+    width: 100%;
+
+
+    .navbar-logo {
+        color: $white-color;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 1.1rem;
+    }
+
+    .navbar-links {
+        list-style: none;
+        display: flex;
+        gap: 1.1rem;
+        padding: 1.1rem;
+
+
+        .navbar-item {
+            .navbar-link {
+                color: $white-color;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: bolder;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
