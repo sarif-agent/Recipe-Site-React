@@ -130,6 +130,11 @@ $text-color: #885133;
             flex-wrap: nowrap;
             display: flex;
             background-color: white;
+            border-radius: 10px;
+
+            img {
+                border-radius: 10px 0 0 10px;
+            }
 
             .container {
 
