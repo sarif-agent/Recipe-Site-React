@@ -1,8 +1,7 @@
-$card-color: #FF8303;
-$bg-color: #F0E3CA;
-$text-color: #1B1A17;
+$card-color: #ffffff;
+$bg-color: #f0e6d7;
 
-
+$text-color: #885133;
 
 .card {
     width: 20%;
@@ -24,11 +23,15 @@ $text-color: #1B1A17;
         margin-top: 5%;
         width: 100%;
         height: 50%;
+        padding-bottom: 10px;
 
         img {
-            height: 100%;
-            width: 60%;
+
+            width: 170px;
+            height: 170px;
             border-radius: 3px;
+
+
 
         }
     }
@@ -51,6 +54,31 @@ $text-color: #1B1A17;
         overflow: hidden;
 
     }
+
+    .edit-form {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        flex-direction: column;
+
+        .input-area {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        button {
+            width: 90px;
+            height: 70px;
+        }
+    }
+
+
+
 
 }
 

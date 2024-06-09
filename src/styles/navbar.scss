@@ -1,6 +1,7 @@
-$primary-color: #1B1A17;
-$secondary-color: #A35709;
-$white-color: #FF8303;
+$hover-color: #d62300;
+$bg-color: #885133;
+$text-color: #f0e6d7;
+
 
 .navbar {
     position: sticky;
@@ -9,13 +10,13 @@ $white-color: #FF8303;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $primary-color;
+    background-color: $bg-color;
 
     width: 100%;
 
 
     .navbar-logo {
-        color: $white-color;
+        color: $text-color;
         font-size: 1.5rem;
         font-weight: bold;
         text-decoration: none;
@@ -31,13 +32,13 @@ $white-color: #FF8303;
 
         .navbar-item {
             .navbar-link {
-                color: $white-color;
+                color: $text-color;
                 text-decoration: none;
                 font-size: 1rem;
                 font-weight: bolder;
 
                 &:hover {
-                    color: $secondary-color;
+                    color: $hover-color;
                 }
             }
         }

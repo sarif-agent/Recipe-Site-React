@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
 import { ApiContext } from "../context/ApiContext";
+import "../styles/NewRecipeForm.scss";
 const NewRecipeForm = () => {
 
 
@@ -33,14 +34,14 @@ const NewRecipeForm = () => {
 
     return (
 
-        <>
+        <div className='new-area'>
             <form onSubmit={handleSubmit} >
                 <input type='text' placeholder='Recipe Title' value={title} onChange={(event) => { setTitle(event.target.value) }} />
                 <input type='text' placeholder='Recipe Image' value={image} onChange={(event) => { setImage(event.target.value) }} />
-                <input type='text' placeholder='Recipe Description' value={desc} onChange={(event) => { setDesc(event.target.value) }} />
-                <input type='submit' placeholder='Add Recipe' />
+                <textarea rows={5} type='text' placeholder='Recipe Description' value={desc} onChange={(event) => { setDesc(event.target.value) }} />
+                <input type='submit' value='Add Recipe' />
             </form >
-        </>
+        </div>
     )
 }
 

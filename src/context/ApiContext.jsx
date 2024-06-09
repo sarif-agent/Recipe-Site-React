@@ -43,6 +43,7 @@ export const ApiContextProvider = ({ children }) => {
     };
 
     useEffect(() => {
+        const random = Math.random() * 1000;
         setTimeout(() => {
 
             const getRecipes = async () => {
@@ -59,7 +60,7 @@ export const ApiContextProvider = ({ children }) => {
                 }
             }
             getRecipes();
-        }, 1000)
+        }, 3000 + random)
 
 
 
@@ -85,7 +86,7 @@ export const ApiContextProvider = ({ children }) => {
 
 
     useEffect(() => {
-        console.log(isLoading.read);
+
     }, [isLoading.read]);
 
 

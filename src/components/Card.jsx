@@ -30,19 +30,22 @@ const Card = ({ title, description, image, id, }) => {
                         </div>
 
                         <div className='input-area'>
-                            <label > Description:</label>
-                            <input type="text" name='description' value={editData.description} onChange={handleEditChange} />
-
-                        </div>
-
-                        <div className='input-area'>
                             <label > Image URL:</label>
                             <input type="text" name='image' value={editData.image} onChange={handleEditChange} />
 
                         </div>
 
-                        <button onClick={handleUpdate}>Update</button>
-                        <button onClick={() => setIsEditing(false)}>Cancel</button>
+
+                        <div className='input-area'>
+                            <label > Description:</label>
+                            <textarea rows={5} name='description' value={editData.description} onChange={handleEditChange} />
+
+                        </div>
+                        <div>
+                            <button onClick={handleUpdate}>Update</button>
+                            <button onClick={() => setIsEditing(false)}>Cancel</button>
+                        </div>
+
                     </div>
                 )
                 :
@@ -52,7 +55,7 @@ const Card = ({ title, description, image, id, }) => {
                             <img src={image} alt={title} className="recipe-image" />
                         </div>
 
-                        <h2>{title}</h2>
+                        <h2>{title.toUpperCase()}</h2>
                         <p>{description}</p>
 
                         <button id='edit' onClick={() => setIsEditing(true)}><FaPen size={64} opacity={1} /></button>

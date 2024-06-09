@@ -12,31 +12,34 @@ export const AuthContextProvider = ({ children }) => {
 
     useEffect(() => {
         const getUserProfile = async () => {
-
-            const response = await axios.get("https://api.escuelajs.co/api/v1/auth/profile", {
-                headers: {
-                    Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).access_token}`
-                }
-            })
-                .then(response => {
-
-                    setUser(response.data)
-
+            if (localStorage.getItem("user")) {
+                const response = await axios.get("https://api.escuelajs.co/api/v1/auth/profile", {
+                    headers: {
+                        Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).access_token}`
+                    }
                 })
-                .catch(e => console.log(e))
+                    .then(response => {
+
+                        setUser(response.data)
+
+                    })
+                    .catch(e => e)
+            }
+
 
 
         }
 
         getUserProfile();
-    }, localStorage.getItem("user"));
+    },);
 
 
 
 
     const login = async (username, password) => {
         try {
-            const response = await AuthService.loginService(username, password)
+            // const response = await AuthService.loginService(username, password)
+            const response = await AuthService.loginService("john@mail.com", "changeme")
 
             if (response.data.access_token) {
                 setIsAuthenticated(JSON.parse(localStorage.getItem("user")))
