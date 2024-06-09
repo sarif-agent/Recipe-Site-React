@@ -35,6 +35,12 @@
       "title": "Fish Tacos",
       "description": "Lightly battered fish served on a soft tortilla with shredded cabbage, a zesty white sauce, and a squeeze of fresh lime.",
       "image": "https://therealkitchen.com/wp-content/uploads/2023/02/bangbangfishtaco-300x300.jpeg"
+    },
+    {
+      "id": "f9ee",
+      "title": "ratatoille",
+      "description": "çok güzel bir yemektir",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXbkzHQotJZrsqHC3SzE7HYq5scVQ3I1P_kg&s"
     }
   ],
   "cards": []

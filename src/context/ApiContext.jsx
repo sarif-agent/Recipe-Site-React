@@ -59,7 +59,7 @@ export const ApiContextProvider = ({ children }) => {
                 }
             }
             getRecipes();
-        }, 5000)
+        }, 1000)
 
 
 

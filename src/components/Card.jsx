@@ -47,7 +47,7 @@ const Card = ({ title, description, image, id, }) => {
                 )
                 :
                 (
-                    <>
+                    <div className='cardContainer'>
                         <div className='imgContainer'>
                             <img src={image} alt={title} className="recipe-image" />
                         </div>
@@ -55,12 +55,12 @@ const Card = ({ title, description, image, id, }) => {
                         <h2>{title}</h2>
                         <p>{description}</p>
 
-                        <button onClick={() => setIsEditing(true)}>Edit</button>
-                        <button onClick={() => {
+                        <button id='edit' onClick={() => setIsEditing(true)}>Edit</button>
+                        <button id='del' onClick={() => {
                             if (confirm("Are sure you want to delete?"))
                                 return deleteRecipe(id);
                         }}>delete</button>
-                    </>
+                    </div>
                 )
             }
 
